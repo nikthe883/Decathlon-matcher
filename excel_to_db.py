@@ -4,7 +4,7 @@ import pandas as pd
 path = r"Databases\Matching_Philosophy\Decathlon_matching_philosophy_EN"
 
 
-def create_sql_data_base(filename_path):
+def create_sql_database(filename_path):
     ''' Creates sqlite database from Excel file for matching philosophy for Decathlon'''
     con = sqlite3.connect(f"{filename_path}.db")
     wb = pd.ExcelFile(filename_path + '.xlsx')
@@ -17,4 +17,4 @@ def create_sql_data_base(filename_path):
 
 
 if __name__ == "__main__":
-    create_sql_data_base(filename_path=path)
+    create_sql_database(filename_path=path)
