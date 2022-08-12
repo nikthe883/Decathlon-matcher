@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Some Title</title>
+</head>
+<body>
+<div class="ui container">
+    <table class="ui striped celled table">
+
+
+        <thead>
+        <tr>
+
+            <th>Category</th>
+            <th>Product</th>
+            <th>Hardware</th>
+            <th>Exact</th>
+            <th>Moderate</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for b in basket %}
+        <tr>
+            <td data-label="Category">{{b[0]}}</td>
+            <td data-label="Product">{{b[1]}}</td>
+            <td data-label="Hardware">{{b[2]}}</td>
+            <td data-label="Exact">{{b[3]}}</td>
+            <td data-label="Moderate">{{b[4]}}</td>
+        </tr>
+
+        {% endfor %}
+        </tbody>
+
+    </table>
+
+<form class="d-flex" action="/search/">
+  <input class="form-control me-2" name="query" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+
+
+</div>
+</body>
+</html>
