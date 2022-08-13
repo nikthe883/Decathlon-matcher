@@ -20,7 +20,7 @@ def search_job(query: str):
     con = sqlite3.connect(file_path)
     cursor = con.cursor()
 
-    cursor.execute("select * from Decathlon where [product] like ?",(query,))
+    cursor.execute("select * from Decathlon where [product] like ?", (f"%{query}%",))
     data = cursor.fetchall()
     return data
 
