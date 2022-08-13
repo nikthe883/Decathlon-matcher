@@ -37,12 +37,18 @@
 
     </table>
 
-<form class="d-flex" action="/search/">
-  <input class="form-control me-2" name="query" type="search" placeholder="Search" aria-label="Search">
-  <button class="btn btn-outline-success" type="submit">Search</button>
-</form>
+</div>
+<div class="ui search ui container">
+    <form class="d-flex" action="/search/">
 
 
+        <div class="ui icon input">
+            <input class="prompt" name="query" type="search" placeholder="Search" aria-label="Search">
+            <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+
+    </form>
 </div>
 </body>
 </html>
